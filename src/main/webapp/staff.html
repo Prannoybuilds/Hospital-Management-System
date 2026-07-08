@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>staff</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body style="background-image:url('staff.png')">
+<!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+      <div><h1>City Care Hospital</h1><p>Hospital Management System</p></div>
+    </div>
+    <nav>
+      <a href="menu.html">🏠 Home</a>
+      <a href="Patients.html" class="active">👤 Patients</a>
+      <a href="Doctor.html">🩺 Doctors</a>
+      <a href="Staff.html">👥 Staff</a>
+      <a href="Appointments.html">📅 Appointments</a>
+      <a href="Billing.html">💳 Billing</a>
+      <a href="Pharmacy.html">💊 Pharmacy</a>
+         <a href="prescriptions.html">📋 Prescriptions</a>
+      <a href="employee.html">🧑‍💼 Employee</a>
+    </nav>
+    <a href="login.html" class="btn-logout">⏻ Logout</a>
+  </header>
+<center>
+    <form name="f" method="post" action="staff.jsp">
+        <table>
+            <tr>
+                <td colspan="2" align="center"><h1>Staff Details</h1></td>
+            </tr>
+
+            <tr>
+                <td>Staff Id</td>
+                <td><input type="text" name="t1"></td>
+            </tr>
+
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="t2"></td>
+            </tr>
+
+            <tr>
+                <td>Role</td>
+                <td>
+                    <select name="t3">
+                        <option value="Nurse">Nurse</option>
+                        <option value="Ward Boy">Ward Boy</option>
+                        <option value="Receptionist">Receptionist</option>
+                        <option value="Lab Technician">Lab Technician</option>
+                        <option value="Pharmacist">Pharmacist</option>
+                        <option value="Cleaner">Cleaner</option>
+                        <option value="Security">Security</option>
+                        <option value="Administrator">Administrator</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Contact</td>
+                <td>
+                    <input type="number" name="t4"></td>
+            </tr>
+
+            <tr>
+                <td>Shift</td>
+                <td>
+                    <select name="t5">
+                        <option value="Morning">Morning (6 AM – 2 PM)</option>
+                        <option value="Afternoon">Afternoon (2 PM – 10 PM)</option>
+                        <option value="Night">Night (10 PM – 6 AM)</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr class="button-row">
+                <td colspan="2">
+                    <input type="reset" value="New">
+                    <input type="submit" value="Save" name="b1">
+                    <input type="submit" value="Update" name="b1">
+                    <input type="submit" value="Delete" name="b1">
+                </td>
+            </tr>
+
+            <tr class="button-row">
+                <td colspan="2">
+                    <input type="submit" value="AllSearch" name="b1">
+                    <input type="submit" value="PSearch" name="b1">
+                    <input type="button" value="SpSearch" name="b1" onclick="spsearch()">
+                    <input type="button" value="Home" name="b1" onclick="home()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>
+ <!-- FOOTER STRIP -->
+  <footer class="strip">
+    <div>🛡️ 24/7 Support <span>We are always here</span></div>
+    <div>🕐 Working Hours <span>Mon - Sun : 24x7</span></div>
+    <div>❤️ Emergency Care <span>Quick & Reliable</span></div>
+    <div>📞 Call Us <span>+91 12345 67890</span></div>
+  </footer>
+
+<script>
+ function spsearch() {
+     window.open("special_search.html");
+ }
+ function home() {
+     window.open("menu.html");
+ }
+</script>
+</body>
+</html>

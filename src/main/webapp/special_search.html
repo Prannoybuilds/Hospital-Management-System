@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Special Search</title>
+
+<link rel="stylesheet" href="form.css">
+
+<script>
+
+function updateFields(){
+
+    var module=document.getElementById("module").value;
+    var field=document.getElementById("field");
+
+    field.innerHTML="";
+
+    var data={
+
+        pharmacy:["medicine_id","name","stock","price"],
+
+        doctor:["doctor_id","name","specialization","contact","department"],
+
+        staff:["staff_id","name","role","contact","shift"],
+
+        patients:["patient_id","name","dob","gender","contact","address"],
+
+        appointments:["appointment_id","patient_id","doctor_id","appointment","status"],
+
+        billing:["bill_id","patient_id","amount","bill","status"],
+
+        prescriptions:["prescription_id","patient_id","doctor_id","medicine_id","dosage"]
+
+    };
+
+    for(var i=0;i<data[module].length;i++){
+
+        var op=document.createElement("option");
+        op.value=data[module][i];
+        op.text=data[module][i].replace("_"," ").toUpperCase();
+        field.appendChild(op);
+
+    }
+
+}
+
+function submitSearch(){
+
+    var module=document.getElementById("module").value;
+
+    document.getElementById("searchForm").action=module+".jsp";
+
+}
+
+window.onload=updateFields;
+
+</script>
+
+</head>
+
+<body style="background-image:url('hospital-search.png')">
+
+<header class="navbar">
+
+<div class="logo">
+
+<img src="logo.png">
+
+<div>
+
+<h1>City Care Hospital</h1>
+
+<p>Hospital Management System</p>
+
+</div>
+
+</div>
+
+<nav>
+
+<a href="menu.html">🏠 Home</a>
+<a href="Patients.html">👤 Patients</a>
+<a href="Doctor.html">🩺 Doctors</a>
+<a href="Staff.html">👥 Staff</a>
+<a href="Appointments.html">📅 Appointments</a>
+<a href="Billing.html">💳 Billing</a>
+<a href="Pharmacy.html">💊 Pharmacy</a>
+<a href="prescriptions.html">📋 Prescriptions</a>
+<a href="employee.html">🧑‍💼 Employee</a>
+
+</nav>
+
+<a href="login.html" class="btn-logout">⏻ Logout</a>
+
+</header>
+
+<div class="main-content">
+
+<form id="searchForm" method="post">
+
+<table>
+
+<tr>
+
+<td colspan="2">
+
+<h1>Special Search</h1>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Module</td>
+
+<td>
+
+<select id="module" name="module" onchange="updateFields()">
+
+<option value="patients">Patients</option>
+
+<option value="doctor">Doctor</option>
+
+<option value="staff">Staff</option>
+
+<option value="appointments">Appointments</option>
+
+<option value="billing">Billing</option>
+
+<option value="pharmacy">Pharmacy</option>
+
+<option value="prescriptions">Prescriptions</option>
+
+</select>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Search By</td>
+
+<td>
+
+<select id="field" name="s">
+
+</select>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Search Value</td>
+
+<td>
+
+<input type="text" name="t1">
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2" align="center">
+
+<input type="submit"
+
+value="Search"
+
+name="b1"
+
+onclick="submitSearch()">
+
+</td>
+
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+<footer class="strip">
+
+<div>
+🛡️ 24/7 Support
+<span>We are always here</span>
+</div>
+
+<div>
+🕐 Working Hours
+<span>Mon - Sun : 24x7</span>
+</div>
+
+<div>
+❤️ Emergency Care
+<span>Quick & Reliable</span>
+</div>
+
+<div>
+📞 Call Us
+<span>+91 12345 67890</span>
+</div>
+
+</footer>
+
+</body>
+</html>

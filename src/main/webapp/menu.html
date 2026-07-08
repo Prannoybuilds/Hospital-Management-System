@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>City Care Hospital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+<div class="logo">
+<img src="logo.png" alt="logo">
+<div>
+<h1>City Care Hospital</h1>
+<p>Hospital Management System</p>
+</div>
+</div>
+
+<nav>
+<a href="menu.html" class="active">🏠 Home</a>
+<a href="patients.html">👤 Patients</a>
+<a href="doctor.html">🩺 Doctors</a>
+<a href="staff.html">👥 Staff</a>
+<a href="appointments.html">📅 Appointments</a>
+<a href="billing.html">💳 Billing</a>
+<a href="pharmacy.html">💊 Pharmacy</a>
+<a href="prescriptions.html">📋 Prescriptions</a>
+<a href="employee.html">🧑‍💼 Employee</a>
+</nav>
+
+<div class="nav-right">
+<button id="themeToggle" class="theme-btn">🌙</button>
+<a href="login.html" class="btn-logout">⏻ Logout</a>
+</div>
+</header>
+
+<div class="notice-bar">
+<marquee scrollamount="6">
+<span class="notice-heading">🔔 GOVERNMENT HEALTH NOTICE</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="divider">|</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="scheme">🩺 Free Health Check-up Camp (15–20 July)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="divider">|</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="scheme">🇮🇳 Ayushman Bharat Registration Open</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="divider">|</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="scheme">💙 ABHA Health ID Registration Available</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="divider">|</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="scheme">❤️ Free Blood Pressure & Diabetes Screening</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="divider">|</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="scheme">🚑 Emergency Services Available 24×7</span>
+</marquee>
+</div>
+
+<section class="hero">
+<img src="hospital.png" class="hero-bg" alt="Hospital">
+<div class="hero-shade"></div>
+
+<div class="hero-overlay">
+<p class="tag">WELCOME TO</p>
+<h2>City Care Hospital</h2>
+<h3>Management System</h3>
+<p class="desc">Manage patients, doctors, appointments, billing, pharmacy and more – all in one place.</p>
+
+<div class="hero-buttons">
+<a href="menu.html" class="btn-primary">Explore Dashboard →</a>
+<a href="https://www.aiims.edu/index.php/en/contactus" target="_blank" class="btn-secondary">Contact Us</a>
+</div>
+</div>
+</section>
+
+<section class="cards">
+<a href="patients.html" class="card"><span class="icon blue">👥</span><h4>Patients</h4><p>Manage patient records and details</p></a>
+<a href="doctor.html" class="card"><span class="icon green">🩺</span><h4>Doctors</h4><p>View and manage doctor information</p></a>
+<a href="staff.html" class="card"><span class="icon purple">👥</span><h4>Staff</h4><p>Manage staff information</p></a>
+<a href="appointments.html" class="card"><span class="icon orange">📅</span><h4>Appointments</h4><p>Book appointments</p></a>
+<a href="billing.html" class="card"><span class="icon pink">💳</span><h4>Billing</h4><p>Generate patient bills</p></a>
+<a href="pharmacy.html" class="card"><span class="icon teal">💊</span><h4>Pharmacy</h4><p>Medicine inventory</p></a>
+<a href="prescriptions.html" class="card"><span class="icon blue">📋</span><h4>Manage Prescriptions</h4><p>Prescriptions</p></a>
+<a href="special_search.html" class="card"><span class="icon yellow">📈</span><h4>Reports</h4><p>Analytics & reports</p></a>
+</section>-
+
+<footer class="strip">
+<div>🛡️ 24/7 Support<span>We are always here</span></div>
+<div>🕐 Working Hours<span>Mon - Sun : 24x7</span></div>
+<div>❤️ Emergency Care<span>Quick & Reliable</span></div>
+<div>📞 Call Us<span>+91 12345 67890</span></div>
+</footer>
+
+<script>
+const btn=document.getElementById("themeToggle");
+if(localStorage.getItem("theme")==="dark"){
+ document.body.classList.add("dark");
+ btn.innerHTML="☀️";
+}
+btn.onclick=function(){
+ document.body.classList.toggle("dark");
+ if(document.body.classList.contains("dark")){
+   localStorage.setItem("theme","dark");
+   btn.innerHTML="☀️";
+ }else{
+   localStorage.setItem("theme","light");
+   btn.innerHTML="🌙";
+ }
+}
+</script>
+
+</body>
+</html>

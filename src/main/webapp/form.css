@@ -1,0 +1,712 @@
+/* =====================================================
+   CITY CARE HOSPITAL - FORM.CSS
+   PART 1
+   RESET + BODY + FORM CARD + HEADER + ROWS
+===================================================== */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Arial,sans-serif;
+}
+
+
+/* BODY */
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+    color:#1e2a3a;
+
+    overflow-x:hidden;
+
+}
+
+
+/* BACKGROUND OVERLAY */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(8,25,55,.18),
+        rgba(8,25,55,.18)
+    );
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+
+/* MAIN CONTENT */
+
+.main-content{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px;
+
+}
+
+
+/* ===========================================
+   FORM CARD
+=========================================== */
+
+table{
+
+    width:840px;
+
+    position:relative;
+
+    background:rgba(222,238,255,.50);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:2px solid rgba(255,255,255,.55);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25),
+        0 0 25px rgba(21,101,216,.15);
+
+    border-collapse:collapse;
+
+}
+
+
+/* REMOVE DEFAULT BORDERS */
+
+table,
+tr,
+td{
+
+    border:none;
+
+}
+
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+table tr:first-child{
+
+    background:linear-gradient(
+        135deg,
+        rgba(21,101,216,.92),
+        rgba(33,150,243,.92)
+    );
+
+    border-bottom:2px solid rgba(255,255,255,.30);
+
+}
+
+table tr:first-child td{
+
+    padding:28px;
+
+}
+
+table tr:first-child h1{
+
+    color:#fff;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    letter-spacing:.5px;
+
+    text-shadow:0 3px 12px rgba(0,0,0,.25);
+
+}
+
+
+/* ===========================================
+   ROWS
+=========================================== */
+
+table tr:not(:first-child){
+
+    transition:.30s;
+
+}
+
+table tr:nth-child(odd):not(:first-child){
+
+    background:rgba(255,255,255,.10);
+
+}
+
+table tr:nth-child(even){
+
+    background:rgba(255,255,255,.22);
+
+}
+
+table tr:hover{
+
+    background:rgba(255,255,255,.35);
+
+}
+
+
+/* ===========================================
+   CELLS
+=========================================== */
+
+td{
+
+    padding:18px 22px;
+
+    font-size:16px;
+
+    border-bottom:1px solid rgba(255,255,255,.20);
+
+}
+
+td:first-child{
+
+    width:230px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#0e437d;
+
+}
+/* =====================================================
+   INPUT FIELDS
+===================================================== */
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=date],
+input[type=time],
+input[type=number],
+textarea,
+select{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    font-size:16px;
+
+    color:#1f2937;
+
+    background:rgba(255,255,255,.70);
+
+    border:2px solid rgba(33,150,243,.25);
+
+    border-radius:12px;
+
+    outline:none;
+
+    transition:all .30s ease;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:100px;
+
+}
+
+select{
+
+    cursor:pointer;
+
+}
+
+
+/* ===========================================
+   INPUT FOCUS
+=========================================== */
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    background:rgba(255,255,255,.95);
+
+    border-color:#2196f3;
+
+    box-shadow:
+
+        0 0 0 4px rgba(33,150,243,.15),
+
+        0 8px 20px rgba(33,150,243,.18);
+
+}
+
+
+/* ===========================================
+   PLACEHOLDER
+=========================================== */
+
+::placeholder{
+
+    color:#7b8794;
+
+}
+
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+input[type=submit],
+input[type=button],
+input[type=reset],
+button{
+
+    background:linear-gradient(
+        135deg,
+        #1565d8,
+        #0d8ddb
+    );
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:13px 26px;
+
+    min-width:105px;
+
+    margin:6px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+    box-shadow:
+
+        0 8px 18px rgba(21,101,216,.30);
+
+}
+
+
+/* ===========================================
+   BUTTON HOVER
+=========================================== */
+
+input[type=submit]:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 14px 28px rgba(21,101,216,.40);
+
+}
+
+
+/* ===========================================
+   BUTTON CLICK
+=========================================== */
+
+input[type=submit]:active,
+input[type=button]:active,
+input[type=reset]:active,
+button:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* ===========================================
+   BUTTON ROW
+=========================================== */
+
+.button-row td{
+
+    text-align:center;
+
+    padding:22px;
+
+}
+
+
+/* ===========================================
+   LINKS
+=========================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:#1565d8;
+
+    transition:.25s;
+
+}
+
+a:hover{
+
+    color:#0b57c5;
+
+}
+
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:900px){
+
+    .main-content{
+
+        padding:20px;
+
+    }
+
+    table{
+
+        width:100%;
+
+    }
+
+    td{
+
+        display:block;
+
+        width:100%;
+
+        padding:15px;
+
+    }
+
+    td:first-child{
+
+        width:100%;
+
+        padding-bottom:8px;
+
+    }
+
+    input[type=submit],
+    input[type=button],
+    input[type=reset]{
+
+        width:100%;
+
+        margin:8px 0;
+
+    }
+
+}
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:14px 30px;
+
+    background:#ffffff;
+
+    border-bottom:3px solid #1565d8;
+
+    box-shadow:0 4px 15px rgba(21,101,216,.10);
+
+    position:relative;
+
+    z-index:100;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:45px;
+
+    height:45px;
+
+    object-fit:contain;
+
+}
+
+.logo h1{
+
+    font-size:20px;
+
+    color:#1565d8;
+
+    font-weight:700;
+
+}
+
+.logo p{
+
+    font-size:12px;
+
+    color:#7a8699;
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar nav{
+
+    display:flex;
+
+    gap:24px;
+
+}
+
+.navbar nav a{
+
+    text-decoration:none;
+
+    color:#34495e;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    padding-bottom:6px;
+
+    border-bottom:2px solid transparent;
+
+    transition:.30s;
+
+}
+
+.navbar nav a:hover{
+
+    color:#1565d8;
+
+    border-bottom-color:#1565d8;
+
+}
+
+.navbar nav a.active{
+
+    color:#1565d8;
+
+    border-bottom-color:#1565d8;
+
+}
+
+
+/* =====================================================
+   LOGOUT BUTTON
+===================================================== */
+
+.btn-logout{
+
+    background:linear-gradient(135deg,#1565d8,#0d8ddb);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    box-shadow:0 6px 18px rgba(21,101,216,.25);
+
+    transition:.30s;
+
+}
+
+.btn-logout:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 24px rgba(21,101,216,.35);
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.strip{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    padding:18px;
+
+    background:#1565d8;
+
+    color:white;
+
+    box-shadow:0 -4px 15px rgba(0,0,0,.08);
+
+}
+
+.strip div{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    text-align:center;
+
+}
+
+.strip span{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-size:12px;
+
+    opacity:.85;
+
+    font-weight:400;
+
+}
+
+
+/* =====================================================
+   SMALL ANIMATIONS
+===================================================== */
+
+table{
+
+    animation:cardFade .5s ease;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#1565d8;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef4fb;
+
+}
+

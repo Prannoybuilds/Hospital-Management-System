@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Employee</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body style="background-image:url('doctor.png')">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+            <div>
+                <h1>City Care Hospital</h1>
+                <p>Hospital Management System</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="menu.html">🏠 Home</a>
+            <a href="Patients.html">👤 Patients</a>
+            <a href="Doctor.html">🩺 Doctors</a>
+            <a href="Staff.html">👥 Staff</a>
+            <a href="Appointments.html">📅 Appointments</a>
+            <a href="Billing.html">💳 Billing</a>
+            <a href="Pharmacy.html">💊 Pharmacy</a>
+            <a href="prescriptions.html">📋 Prescriptions</a>
+            <a href="employee.html" class="active">🧑‍💼 Employee</a>
+        </nav>
+
+        <a href="login.html" class="btn-logout">⏻ Logout</a>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <form name="f" method="post" action="employee.jsp">
+
+            <table>
+
+                <tr>
+                    <td colspan="2">
+                        <h1>Register</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Employee ID</td>
+                    <td>
+                        <input type="text" name="t1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" name="t2">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Salary</td>
+                    <td>
+                        <input type="text" name="t3">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>New Salary</td>
+                    <td>
+                        <input type="text" name="t4" readonly>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="button" value="Find" onclick="a()">
+                        <input type="submit" value="Save" name="b1">
+                        <input type="submit" value="AllSearch" name="b1">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="strip">
+        <div>
+            🛡️ 24/7 Support
+            <span>We are always here</span>
+        </div>
+
+        <div>
+            🕐 Working Hours
+            <span>Mon - Sun : 24x7</span>
+        </div>
+
+        <div>
+            ❤️ Emergency Care
+            <span>Quick & Reliable</span>
+        </div>
+
+        <div>
+            📞 Call Us
+            <span>+91 12345 67890</span>
+        </div>
+    </footer>
+
+    <script>
+        function a() {
+            var m = parseFloat(document.f.t3.value);
+
+            if (!isNaN(m)) {
+                document.f.t4.value = (m + (m * 0.10)).toFixed(2);
+            } else {
+                alert("Please enter a valid salary.");
+            }
+        }
+    </script>
+
+</body>
+</html>

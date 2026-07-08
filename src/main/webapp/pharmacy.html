@@ -1,0 +1,158 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pharmacy</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body style="background-image:url('pharmacy.png')">
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+        <div>
+            <h1>City Care Hospital</h1>
+            <p>Hospital Management System</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="menu.html">🏠 Home</a>
+        <a href="Patients.html">👤 Patients</a>
+        <a href="Doctor.html">🩺 Doctors</a>
+        <a href="Staff.html">👥 Staff</a>
+        <a href="Appointments.html">📅 Appointments</a>
+        <a href="Billing.html">💳 Billing</a>
+        <a href="Pharmacy.html" class="active">💊 Pharmacy</a>
+        <a href="prescriptions.html">📋 Prescriptions</a>
+        <a href="employee.html">🧑‍💼 Employee</a>
+    </nav>
+
+    <a href="login.html" class="btn-logout">⏻ Logout</a>
+</header>
+
+<center>
+
+<form name="f" method="post" action="pharmacy.jsp">
+
+<table>
+
+<tr>
+<td colspan="2"
+style="
+background:linear-gradient(135deg,#1565d8,#2196f3);
+color:white;
+font-size:42px;
+font-weight:bold;
+text-align:center;
+padding:28px;
+text-shadow:0 2px 8px rgba(0,0,0,.25);">
+
+Pharmacy Details
+
+</td>
+</tr>
+
+<tr>
+<td>Medicine Id</td>
+<td>
+<input type="text" name="t1">
+</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td>
+<input type="text" name="t2">
+</td>
+</tr>
+
+<tr>
+<td>Stock</td>
+<td>
+<input type="number" name="t3">
+</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td>
+<input type="number" step="0.01" name="t4">
+</td>
+</tr>
+
+<tr class="button-row">
+<td colspan="2">
+
+<input type="reset" value="New">
+
+<input type="submit"
+value="Save"
+name="b1">
+
+<input type="submit"
+value="Update"
+name="b1">
+
+<input type="submit"
+value="Delete"
+name="b1">
+
+</td>
+</tr>
+
+<tr class="button-row">
+<td colspan="2">
+
+<input type="submit"
+value="AllSearch"
+name="b1">
+
+<input type="submit"
+value="PSearch"
+name="b1">
+
+<input type="button"
+value="SpSearch"
+onclick="spsearch()">
+
+<input type="button"
+value="Home"
+onclick="home()">
+
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</center>
+
+<!-- FOOTER -->
+
+<footer class="strip">
+    <div>🛡️ 24/7 Support <span>We are always here</span></div>
+    <div>🕐 Working Hours <span>Mon - Sun : 24x7</span></div>
+    <div>❤️ Emergency Care <span>Quick & Reliable</span></div>
+    <div>📞 Call Us <span>+91 12345 67890</span></div>
+</footer>
+
+<script>
+
+function spsearch()
+{
+    window.location.href="special_search.html";
+}
+
+function home()
+{
+    window.location.href="menu.html";
+}
+
+</script>
+
+</body>
+</html>

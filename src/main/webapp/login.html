@@ -1,0 +1,112 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body style="background-image:url('login.png')">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+            <div>
+                <h1>City Care Hospital</h1>
+                <p>Hospital Management System</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="menu.html">🏠 Home</a>
+            <a href="Patients.html">👤 Patients</a>
+            <a href="Doctor.html">🩺 Doctors</a>
+            <a href="Staff.html">👥 Staff</a>
+            <a href="Appointments.html">📅 Appointments</a>
+            <a href="Billing.html">💳 Billing</a>
+            <a href="Pharmacy.html">💊 Pharmacy</a>
+            <a href="prescriptions.html">📋 Prescriptions</a>
+            <a href="employee.html">🧑‍💼 Employee</a>
+        </nav>
+
+        <a href="login.html" class="btn-logout">⏻ Logout</a>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <form name="f" method="post" action="login.jsp">
+
+            <table>
+
+                <tr>
+                    <td colspan="2" style="
+                        text-align:center;
+                        font-size:42px;
+                        font-weight:bold;
+                        color:white;
+                        background:linear-gradient(135deg,#1565d8,#2196f3);
+                        padding:28px;">
+                        Login Details
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Login ID</td>
+                    <td>
+                        <input type="text" name="t1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Login Password</td>
+                    <td>
+                        <input type="password" name="t2">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Login" name="b1">
+                        <input type="button" value="Register" onclick="register()">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="strip">
+        <div>
+            🛡️ 24/7 Support
+            <span>We are always here</span>
+        </div>
+
+        <div>
+            🕐 Working Hours
+            <span>Mon - Sun : 24x7</span>
+        </div>
+
+        <div>
+            ❤️ Emergency Care
+            <span>Quick & Reliable</span>
+        </div>
+
+        <div>
+            📞 Call Us
+            <span>+91 12345 67890</span>
+        </div>
+    </footer>
+
+    <script>
+        function register() {
+            window.location.href = "register.html";
+        }
+    </script>
+
+</body>
+</html>

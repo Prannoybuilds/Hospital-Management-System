@@ -1,0 +1,121 @@
+ <html>
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body style="background-image:url('doctor.png')">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+      <div><h1>City Care Hospital</h1><p>Hospital Management System</p></div>
+    </div>
+    <nav>
+      <a href="menu.html">🏠 Home</a>
+      <a href="Patients.html">👤 Patients</a>
+      <a href="Doctor.html" class="active">🩺 Doctors</a>
+      <a href="Staff.html">👥 Staff</a>
+      <a href="Appointments.html">📅 Appointments</a>
+      <a href="Billing.html">💳 Billing</a>
+      <a href="Pharmacy.html">💊 Pharmacy</a>
+         <a href="prescriptions.html">📋 Prescriptions</a>
+      <a href="employee.html">🧑‍💼 Employee</a>
+    </nav>
+    <a href="login.html" class="btn-logout">⏻ Logout</a>
+  </header>
+
+  <div style="flex:1; display:flex; align-items:center; justify-content:center; padding:40px;">
+    <form name="f" method="post" action="doctor.jsp">
+        <table>
+            <tr>
+                <td colspan="2" align="center"><h1>Doctor Details</h1></td>
+            </tr>
+            <tr>
+                <td>Doctor Id</td>
+                <td><input type="text" name="t1"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="t2"></td>
+            </tr>
+            <tr>
+                <td>Specialization</td>
+                <td>
+                    <select name="t3">
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Psychiatry">Psychiatry</option>
+                        <option value="Radiology">Radiology</option>
+                        <option value="General Medicine">General Medicine</option>
+                        <option value="Surgery">Surgery</option>
+                        <option value="Gynecology">Gynecology</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td><input type="number" name="t4" ></td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td>
+                    <select name="t5">
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Psychiatry">Psychiatry</option>
+                        <option value="Radiology">Radiology</option>
+                        <option value="General Medicine">General Medicine</option>
+                        <option value="Surgery">Surgery</option>
+                        <option value="Gynecology">Gynecology</option>
+                        <option value="Emergency Medicine">Emergency Medicine</option>
+                        <option value="ENT">ENT</option>
+                        <option value="Oncology">Oncology</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="button-row">
+                <td colspan="2">
+                    <input type="reset" value="New">
+                    <input type="submit" value="Save" name="b1">
+                    <input type="submit" value="Update" name="b1">
+                    <input type="submit" value="Delete" name="b1">
+                </td>
+            </tr>
+            <tr class="button-row">
+                <td colspan="2">
+                    <input type="submit" value="AllSearch" name="b1">
+                    <input type="submit" value="PSearch" name="b1">
+                    <input type="button" value="SpSearch" name="b1" onclick="spsearch()">
+                    <input type="button" value="Home" name="b1" onclick="home()">
+                </td>
+            </tr>
+        </table>
+    </form>
+  </div>
+
+  <!-- FOOTER STRIP -->
+  <footer class="strip">
+    <div>🛡️ 24/7 Support <span>We are always here</span></div>
+    <div>🕐 Working Hours <span>Mon - Sun : 24x7</span></div>
+    <div>❤️ Emergency Care <span>Quick & Reliable</span></div>
+    <div>📞 Call Us <span>+91 12345 67890</span></div>
+  </footer>
+
+    <script>
+        function spsearch() {
+            window.open("special_search.html");
+        }
+        function home() {
+            window.open("menu.html");
+        }
+    </script>
+</body>
+</html>

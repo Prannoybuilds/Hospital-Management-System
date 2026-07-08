@@ -8,11 +8,21 @@ Designed to simplify hospital administration by providing an easy-to-use dashboa
 
 ## 📸 Project Preview
 
-> *(Add screenshots here)*
+## 📸 Dashboard Preview
 
-### Dashboard
+### Dashboard - Hero Section
 
-![Dashboard](screenshots/dashboard.png)
+<p align="center">
+  <img src="SCREENSHOTS/dashboard-top.jpeg" width="100%">
+</p>
+
+### Dashboard - Dashboard Modules
+
+<p align="center">
+  <img src="SCREENSHOTS/dashboard-bottom.jpeg" width="100%">
+</p>
+
+
 
 ### Login Page
 

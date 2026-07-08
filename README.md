@@ -1,170 +1,146 @@
-# 🏥 Hospital Management System
+# 🏥 City Care Hospital Management System
 
-A modern **Hospital Management System** developed using **Java, JSP, Servlets, JDBC, Oracle SQL*Plus, HTML, CSS, and JavaScript**.
+A modern **Hospital Management System** developed using **Java, JSP, HTML, CSS, JavaScript, Oracle SQL Plus, and Apache Tomcat**.
 
-Designed to simplify hospital administration by providing an easy-to-use dashboard for managing patients, doctors, appointments, billing, pharmacy, and employee records.
-
----
-
-## 📸 Project Preview
-
-## 📸 Dashboard Preview
-
-### Dashboard - Hero Section
-
-<p align="center">
-  <img src="SCREENSHOTS/dashboard-top.jpeg" width="100%">
-</p>
-
-### Dashboard - Dashboard Modules
-
-<p align="center">
-  <img src="SCREENSHOTS/dashboard-bottom.jpeg" width="100%">
-</p>
-
-
-
-### Login Page
-
-![Login](screenshots/login.png)
+The project helps manage hospital operations such as patient records, doctors, appointments, billing, pharmacy, staff management, and prescriptions through an easy-to-use web interface.
 
 ---
 
 # ✨ Features
 
-- 👨‍⚕️ Doctor Management
-- 🧑‍🤝‍🧑 Patient Management
-- 👨‍💼 Employee Management
-- 📅 Appointment Scheduling
+- 👨‍⚕️ Patient Management
+- 🩺 Doctor Management
+- 👥 Staff Management
+- 📅 Appointment Booking
 - 💳 Billing System
 - 💊 Pharmacy Management
-- 📋 Prescription Records
-- 🔍 Search Module
-- 🌙 Dark / Light Theme
-- 📱 Responsive User Interface
-- 🔐 Login System
+- 📋 Prescription Management
+- 📈 Reports Module
+- 🌙 Dark / Light Mode
+- 🔐 Secure Login System
+- 📢 Government Health Notice Bar
+- 🎨 Responsive Premium UI
 
 ---
 
 # 🛠️ Tech Stack
 
-### Frontend
-
-- HTML5
-- CSS3
-- JavaScript
-
-### Backend
-
-- Java
-- JSP
-- Servlets
-- JDBC
-
-### Database
-
-- Oracle Database
-- Oracle SQL*Plus
-
-### Server
-
-- Apache Tomcat
-
-### IDE
-
-- Eclipse IDE
+| Technology | Used |
+|------------|------|
+| Java | ✅ |
+| JSP | ✅ |
+| HTML5 | ✅ |
+| CSS3 | ✅ |
+| JavaScript | ✅ |
+| Oracle SQL Plus | ✅ |
+| Apache Tomcat 10 | ✅ |
+| Eclipse IDE | ✅ |
 
 ---
 
 # 📂 Project Structure
 
 ```
-src
-└── main
-    ├── java
-    └── webapp
-        ├── WEB-INF
-        ├── META-INF
-        ├── *.jsp
-        ├── *.html
-        ├── *.css
-        ├── *.png
+Hospital-Management-System
+│
+├── src
+│   └── main
+│       └── webapp
+│           ├── menu.html
+│           ├── login.html
+│           ├── patients.html
+│           ├── doctor.html
+│           ├── staff.html
+│           ├── appointments.html
+│           ├── billing.html
+│           ├── pharmacy.html
+│           ├── prescriptions.html
+│           ├── employee.html
+│           ├── style.css
+│           └── ...
+│
+├── DATABASE
+│   ├── hospital_schema.sql
+│   └── hospital_sample_data.sql
+│
+└── SCREENSHOTS
+    ├── dashboard-top.jpeg
+    └── dashboard-bottom.jpeg
 ```
 
 ---
 
-# 🚀 Installation
+# 🖥️ Dashboard
 
-## Clone Repository
+### Dashboard (Top)
 
-```bash
+![Dashboard Top](SCREENSHOTS/dashboard-top.jpeg)
+
+---
+
+### Dashboard (Modules)
+
+![Dashboard Bottom](SCREENSHOTS/dashboard-bottom.jpeg)
+
+---
+
+# ⚙️ Installation
+
+1. Clone the repository
+
+```
 git clone https://github.com/Prannoybuilds/Hospital-Management-System.git
 ```
 
-## Import Project
+2. Import the project into Eclipse.
 
-Import the project into **Eclipse IDE** as a Dynamic Web Project.
+3. Configure Apache Tomcat 10.
 
-## Configure Apache Tomcat
+4. Import the SQL files from the `DATABASE` folder.
 
-Add Apache Tomcat to Eclipse and deploy the project.
+5. Start Tomcat.
 
-## Configure Oracle Database
+6. Open
 
-Create the required tables in Oracle SQL*Plus.
-
-Update your JDBC connection details inside the project.
-
-Run the application.
+```
+http://localhost:8080/Hospital/menu.html
+```
 
 ---
 
-# 💻 Modules
+# 🔑 Login Credentials
 
-- Login
-- Dashboard
-- Patients
-- Doctors
-- Staff
-- Employee
-- Pharmacy
-- Appointments
-- Billing
-- Prescriptions
-- Reports
+```
+Username : hospital
+Password : hospital
+```
 
 ---
 
-# 🌙 UI Features
+# 📄 Database
 
-- Modern Dashboard
-- Professional Navigation Bar
-- Responsive Design
-- Glassmorphism Cards
-- Light/Dark Theme
-- Hospital Hero Banner
-- Animated Buttons
+The repository contains:
 
----
+- `hospital_schema.sql`
+- `hospital_sample_data.sql`
 
-# 📌 Future Improvements
-
-- Email Notifications
-- PDF Report Generation
-- QR Code Based Patient Records
-- Online Appointment Booking
-- Role Based Authentication
-- Analytics Dashboard
+Import both files into Oracle SQL Plus before running the project.
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Developer
 
 **Prannoy Sen**
 
-- LinkedIn: https://www.linkedin.com/in/prannoy-sen-3aa64b3a0/
-- GitHub: https://github.com/Prannoybuilds
+- B.Tech Computer Science Engineering
+- Manipal University Jaipur
+
+GitHub:
+https://github.com/Prannoybuilds
+
+LinkedIn:
+https://www.linkedin.com/in/prannoy-sen-3aa64b3a0/
 
 ---
 
-## ⭐ If you like this project, consider giving it a star.
+## ⭐ If you like this project, don't forget to Star the repository.

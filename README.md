@@ -6,7 +6,7 @@ The project helps manage hospital operations such as patient records, doctors, a
 
 ---
 
-# ✨ Features
+#  ✨ Features
 
 - 👨‍⚕️ Patient Management
 - 🩺 Doctor Management
